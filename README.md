@@ -27,8 +27,6 @@ Database access will be done using the `db.js` file included inside the `data` f
 
 Now that we have a way to add, update, remove and retrieve data from the provided database, it is time to work on the API.
 
-here
-
 ### Start the API and Implement Requirements
 
 - To start the server, type `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
