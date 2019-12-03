@@ -21,6 +21,24 @@ server.get("/api/users", (req, res) => {
         });
 });
 
+server.get("/api/users/:id", (req, res) => {
+    const id = req.params.id;
+    db.findById(id)
+    .then(user => {
+        if(user) {
+        res.status(200).json(user);
+        }else {
+            res.send(404).json({message: "User not found"});
+        }
+    })
+    .catch(error => {
+        console.log("error on GET /api/users/:id", error);
+        res
+            .status(500)
+            .json({errorMessage: "Error getting user by id from database"});
+    });
+});
+
 
 const port = 5000;
 server.listen(port, () => 

@@ -29,9 +29,9 @@ Now that we have a way to add, update, remove and retrieve data from the provide
 
 ### Start the API and Implement Requirements
 
-- To start the server, type `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
-- Add the code necessary to implement the API requirements.
-- **Test the API using _Postman_ as you work through the exercises.**
+✅- To start the server, type `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
+✅- Add the code necessary to implement the API requirements.
+✅- **Test the API using _Postman_ as you work through the exercises.**
 
 ### User Schema
 
@@ -39,6 +39,7 @@ Users in the database conform to the following object structure:
 
 ```js
 {
+  id: 1
   name: "Jane Doe", // String, required
   bio: "Not Tarzan's Wife, another Jane",  // String
   created_at: Mon Aug 14 2017 12:50:16 GMT-0700 (PDT) // Date, defaults to current date
@@ -53,7 +54,7 @@ Inside `index.js` add the code necessary to implement the following _endpoints_:
 | Method | URL            | Description                                                                                                                       |
 | ------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | POST   | /api/users     | Creates a user using the information sent inside the `request body`.                                                              |
-| GET    | /api/users     | Returns an array of all the user objects contained in the database.                                                               |
+✅| GET    | /api/users     | Returns an array of all the user objects contained in the database.                                                               |
 | GET    | /api/users/:id | Returns the user object with the specified `id`.                                                                                  |
 | DELETE | /api/users/:id | Removes the user with the specified `id` and returns the deleted user.                                                            |
 | PUT    | /api/users/:id | Updates the user with the specified `id` using data from the `request body`. Returns the modified document, **NOT the original**. |
