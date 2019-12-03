@@ -39,7 +39,6 @@ Users in the database conform to the following object structure:
 
 ```js
 {
-  id: 1
   name: "Jane Doe", // String, required
   bio: "Not Tarzan's Wife, another Jane",  // String
   created_at: Mon Aug 14 2017 12:50:16 GMT-0700 (PDT) // Date, defaults to current date

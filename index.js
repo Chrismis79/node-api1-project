@@ -39,6 +39,20 @@ server.get("/api/users/:id", (req, res) => {
     });
 });
 
+//add user
+server.post('/api/users', (req, res) => {
+    const userData = req.body;
+    db.insert(userData)
+        .then(user => {
+            res.status(201).json(userData);
+        })
+        .catch(error => {
+            console.log('Error on POST /api/users', error);
+            res.status(500)
+                .json({errorMessage: "Error creating new user"});
+        });
+});
+
 
 const port = 5000;
 server.listen(port, () => 
